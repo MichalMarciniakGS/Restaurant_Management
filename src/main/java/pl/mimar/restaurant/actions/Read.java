@@ -7,19 +7,19 @@ import java.io.IOException;
 
 import static pl.mimar.restaurant.RestaurantManagement.givenLine;
 
-public class Read implements ExemplaryAction{
+public class Read implements ExemplaryAction {
 
     File inputFile = new File("output2.txt");
 
-    public void runAction(){
+    public void runAction() {
 
-        try(BufferedReader reader = new BufferedReader(new FileReader(inputFile));) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(inputFile));) {
             String currentLine;
 
             while ((currentLine = reader.readLine()) != null) {
                 // trim newline when comparing with lineToRemove
                 String trimmedLine = currentLine.trim();
-                if (trimmedLine.contains(givenLine)){
+                if (trimmedLine.contains(givenLine)) {
                     System.out.println("Showing required order: " + currentLine);
                 }
             }

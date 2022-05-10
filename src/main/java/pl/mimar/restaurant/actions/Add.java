@@ -15,24 +15,20 @@ import java.util.Scanner;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
-public class Add implements ExemplaryAction{
+public class Add implements ExemplaryAction {
 
-
-    private OrderData orderData = new OrderData();
-
-    private List<OrderData> orderDataList = new ArrayList<>();
-
-    private Scanner scanner = new Scanner(System.in);
 
     private static Logger LOG = Logger.getLogger(Add.class.getName());
-
+    private OrderData orderData = new OrderData();
+    private List<OrderData> orderDataList = new ArrayList<>();
+    private Scanner scanner = new Scanner(System.in);
 
     public void runAction() {
 
         try {
             System.out.println("Please provide order name: ");
             orderData.setOrderName(scanner.nextLine());
-            if (orderData.getOrderName().equals("")){
+            if (orderData.getOrderName().equals("")) {
                 LOG.info("Lack of order name. Order will not be added");
                 throw new SomethingWentWrongException();
             }

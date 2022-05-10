@@ -1,4 +1,4 @@
 package pl.mimar.restaurant;
 
-public class SomethingWentWrongException extends RuntimeException{
+public class SomethingWentWrongException extends RuntimeException {
 }

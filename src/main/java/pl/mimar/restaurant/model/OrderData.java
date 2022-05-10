@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalTime;
 
-public class OrderData implements Serializable{
+public class OrderData implements Serializable {
 
     private String orderName;
     private int tableNumber;

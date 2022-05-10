@@ -10,11 +10,10 @@ import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Sort implements ExemplaryAction{
+public class Sort implements ExemplaryAction {
 
     File inputFile = new File("output2.txt");
     File tempFile = new File("output2_temp.txt");
-
 
 
     public void runAction() {
@@ -25,8 +24,8 @@ public class Sort implements ExemplaryAction{
 
             ArrayList<OrderDataSorting> orderDataArrayList = new ArrayList<>();
             String currentLine = reader.readLine();
-            while(currentLine != null){
-                String [] dataDetails = currentLine.split(",");
+            while (currentLine != null) {
+                String[] dataDetails = currentLine.split(",");
                 String name = dataDetails[0];
 //                System.out.println("name is: " +name);
                 String tableNumber = dataDetails[1];
@@ -39,19 +38,19 @@ public class Sort implements ExemplaryAction{
                 currentLine = reader.readLine();
             }
 
-            Collections.sort(orderDataArrayList ,new OrderTimeCompare());
+            Collections.sort(orderDataArrayList, new OrderTimeCompare());
 
-            for (OrderDataSorting orderDataSorting : orderDataArrayList){
-                writer.write(orderDataSorting.getName() +",");
-                writer.write(orderDataSorting.getTableNumber()+",");
-                writer.write(orderDataSorting.getOrderTime()+",");
+            for (OrderDataSorting orderDataSorting : orderDataArrayList) {
+                writer.write(orderDataSorting.getName() + ",");
+                writer.write(orderDataSorting.getTableNumber() + ",");
+                writer.write(orderDataSorting.getOrderTime() + ",");
                 writer.write(orderDataSorting.getCost());
                 writer.newLine();
             }
             reader.close();
             writer.close();
 
-            Files.move(Paths.get("output2_temp.txt"),Paths.get("output2.txt"),
+            Files.move(Paths.get("output2_temp.txt"), Paths.get("output2.txt"),
                     StandardCopyOption.REPLACE_EXISTING);
 
             boolean successful = tempFile.renameTo(inputFile);
@@ -70,7 +69,7 @@ public class Sort implements ExemplaryAction{
 //            }
 //            System.out.println("done");
 //        }
-        }catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

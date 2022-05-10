@@ -27,7 +27,7 @@ public class RestaurantManagement {
     }
 
 
-     void start() {
+    void start() {
         LOG.info("Application has started:");
         boolean mainLoop = true;
 
@@ -42,9 +42,7 @@ public class RestaurantManagement {
                     add.runAction();
                     System.out.println("Order successfully added");
                     System.out.println("add | delete | read | sort | exit");
-                }
-
-                else if (scannerInput.equals(ListOfActions.READ.getName())) {
+                } else if (scannerInput.equals(ListOfActions.READ.getName())) {
                     System.out.println("You want to read all orders or the specific one?");
                     System.out.println("read all | read specific");
                     scannerInput = (scanner.nextLine()).toString();
@@ -60,8 +58,7 @@ public class RestaurantManagement {
                         read.runAction();
                         System.out.println("add | delete | read | sort | exit");
                     }
-                }
-                else if (scannerInput.equals(ListOfActions.DELETE.getName())) {
+                } else if (scannerInput.equals(ListOfActions.DELETE.getName())) {
                     System.out.println("You want to delete all orders or the specific one?");
                     System.out.println("delete all | delete specific");
                     scannerInput = (scanner.nextLine()).toString();
@@ -78,19 +75,15 @@ public class RestaurantManagement {
                         System.out.println("Given order was deleted (or not found :D)");
                         System.out.println("add | delete | read | sort | exit");
                     }
-                }
-                else if (scannerInput.equals(ListOfActions.SORT.getName())) {
+                } else if (scannerInput.equals(ListOfActions.SORT.getName())) {
                     System.out.println("Sorting all lines");
                     sort.runAction();
                     System.out.println("All lines in txt file, successfully sorted by orderTime");
                     System.out.println("add | delete | read | sort | exit");
-                }
-
-                else if (scannerInput.equals(ListOfActions.EXIT.getName())) {
+                } else if (scannerInput.equals(ListOfActions.EXIT.getName())) {
                     mainLoop = false;
                     System.out.println("Successfully ended using application");
-                }
-                else{
+                } else {
                     LOG.info("Wrong command please, please use one from the list: ");
                     System.out.println("add | delete | read | sort | exit");
                 }
@@ -99,7 +92,7 @@ public class RestaurantManagement {
                 LOG.log(Level.WARNING, "Validation exception " + e.getMessage() + " Other value expected");
                 System.out.println("add | delete | read | sort | exit");
 
-            }catch (DateTimeParseException e){
+            } catch (DateTimeParseException e) {
                 LOG.log(Level.WARNING, "Wrong date format " + e.getMessage() + " [hh:mm] format expected");
                 System.out.println("add | delete | read | sort | exit");
 

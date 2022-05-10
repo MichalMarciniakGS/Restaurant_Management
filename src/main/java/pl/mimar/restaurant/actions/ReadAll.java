@@ -13,13 +13,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
-public class ReadAll implements ExemplaryAction{
+public class ReadAll implements ExemplaryAction {
 
     private static Logger LOG = Logger.getLogger(ReadAll.class.getName());
 
-    public void runAction(){
+    public void runAction() {
 
-        try(BufferedReader bufReader = new BufferedReader(new FileReader("output2.txt"))) {
+        try (BufferedReader bufReader = new BufferedReader(new FileReader("output2.txt"))) {
 
             ArrayList<String> listOfLines = new ArrayList<>();
 
@@ -36,7 +36,7 @@ public class ReadAll implements ExemplaryAction{
             } else {
                 LOG.info("List is currently empty!");
             }
-        }catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
