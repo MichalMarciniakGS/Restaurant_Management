@@ -1,0 +1,5 @@
+OrderData{orderName='Spaghetti', tableNumber=2, orderTime=12:00, orderCost=30}
+OrderData{orderName='Pizza', tableNumber=4, orderTime=10:00, orderCost=40}
+OrderData{orderName='Chicken nuggets', tableNumber=2, orderTime=13:00, orderCost=15}
+OrderData{orderName='Cake', tableNumber=5, orderTime=15:30, orderCost=20}
+OrderData{orderName='Soup', tableNumber=5, orderTime=11:25, orderCost=25}

@@ -1,0 +1,9 @@
+pl\mimar\restaurant\actions\Add.class
+pl\mimar\restaurant\actions\ListOfActions.class
+pl\mimar\restaurant\actions\ReadAll.class
+pl\mimar\restaurant\actions\Delete.class
+pl\mimar\restaurant\input\InputCommand.class
+pl\mimar\restaurant\RestaurantManagement.class
+pl\mimar\restaurant\model\OrderData.class
+pl\mimar\restaurant\input\InputManager.class
+pl\mimar\restaurant\actions\DeleteAll.class
